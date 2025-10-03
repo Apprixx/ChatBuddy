@@ -1,7 +1,46 @@
 # ChatBuddy
-ChatBuddy是一个基于 wxauto 的微信聊天机器人。项目最初的动机是解决日常中“无聊骚扰”的问题：有些人在无聊时会频繁向他人发送无意义的信息，干扰了他人学习与生活，而免打扰又可能导致错过真正重要的消息。
-为此，我开发了一款可以与用户进行自然对话的 AI 驱动机器人，为无聊的人提供一个可互动的对象，既满足了他们的社交需求，也有效减少了对他人的打扰。
 
-ChatBuddy is a WeChat chatbot built on wxauto. The initial motivation behind this project was to address the problem of “boredom-driven harassment” in daily life: some people, out of boredom, frequently send meaningless messages that disrupt others’ study and work, while enabling “Do Not Disturb” risks missing truly important notifications.
+ChatBuddy 是一个基于 [wxauto](https://github.com/cluic/wxauto) 的 **AI 驱动微信聊天机器人**。  
+项目最初的动机是解决日常中“无聊骚扰”的问题：有些人在无聊时会频繁向他人发送无意义的信息，干扰了他人学习与生活，而免打扰又可能导致错过真正重要的消息。  
 
-To solve this, I developed an AI-powered chatbot capable of engaging in natural conversations. It provides bored users with an interactive partner, fulfilling their social needs while effectively reducing unnecessary disturbances to others.
+为此，我开发了一款能够进行自然对话的微信机器人，为无聊的用户提供一个互动对象，既满足了他们的社交需求，又减少了对他人的干扰。  
+
+---
+
+## ✨ 功能特点
+
+- 🤖 **自然对话**：基于大语言模型，实现上下文对话  
+- 📨 **自动收发消息**：支持私聊与群聊（部分功能持续优化中）  
+- ⚡ **速率控制**：避免触发微信风控  
+- 📜 **日志与异常处理**：保证运行稳定  
+- 📊 **运行统计**：可统计消息处理量与 API 调用次数  
+- 🛠 **可扩展**：支持二次开发和功能扩展  
+
+---
+
+ChatBuddy 基于 wxauto 对微信 PC 客户端进行自动化控制，主要包括：
+
+消息监听：实时抓取新消息
+消息解析：判断消息来源、类型（群聊/私聊）
+调用大模型：将消息发送给语言模型获取回复
+消息发送：模拟键盘输入并发送回复
+
+## 📦 安装与运行
+
+### 环境要求
+- Windows 系统  
+- Python 3.9+  
+- 已安装微信 PC 3.9.x 客户端  
+
+### 安装依赖
+请根据项目实际需要安装依赖库，例如：  
+```bash
+pip install wxauto openai
+```
+
+TODO: 
+升级到 wxauto v2.0
+群聊上下文优化：结合多成员聊天内容
+加入插件系统，支持定制功能（如天气、提醒等）
+
+⚠️ 免责声明：本项目仅供学习与研究使用。使用过程中应操作不当导致微信账号封禁，作者不承担由此带来的一切后果。
